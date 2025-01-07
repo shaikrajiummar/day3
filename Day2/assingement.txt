@@ -1,0 +1,163 @@
+Give me some idea on what is a Data type. What are Primitive Data types and Non-Primitive Data types. Explain with some examples ??
+
+
+Ans:- Data type: The data type is used to define what kind of data is used in the variable.
+The Data types can be classified into two. They are :-
+1.Primitive Data-types
+2.Non-Primitive Data-types
+
+1.Primitive Data-types :-
+They are immutable. That means values cannot be modified or change.
+They store single values.
+
+They are been classified as follows :-
+
+1.Number: Represents numeric values, including integers and floating-point numbers.
+Ex :- let num1 = 10;
+      console.log(num1, typeof(num1));
+
+let num2 = 10.2345;
+console.log(num2, typeof(num2));
+
+let num3 = 10e3;
+console.log(num3, typeof(num3));
+
+
+2.String: Represents textual data, enclosed within single or double quotes.
+Ex :- let str1 = "double quotes";
+      console.log(str1, typeof(str1));
+
+let str2 ='single quotes';
+console.log(str2, typeof(str2));
+
+let str3 = template literals;
+console.log(str3, typeof(str3));
+
+
+3.Boolean: Represents logical values, either true or false.
+Ex :- let bool1 = true;
+      console.log(bool1, typeof(bool1));
+
+let bool2 = false;
+console.log(bool2, typeof(bool2));
+
+
+4.Null: Represents the intentional absence of any object value.
+Ex :- let x = null;
+      console.log(x, typeof(x));
+
+
+5.Undefined: Represents a variable that has been declared but not assigned a value.
+Ex :- let a;
+      console.log(a, typeof(a));
+
+
+6.BigInt: If the integer exceeds the range of -2^53-1 to +2^53-1 is called BigInt
+Ex :- let b = BigInt("0b1010101001010101001111111111111111");
+      console.log(b);
+
+
+7.Symbol: Represents a unique and immutable value that can be used as an object property key.
+Ex :- let s1 = Symbol("Kajal");
+      let s2 = Symbol("Kajal");
+      console.log(s1 == s2);
+
+
+
+
+
+2. Non-Primitive Datatypes:-
+Non-primitive data types in JavaScript are more complex than primitive types (like numbers, strings, or booleans). They are objects or collections of objects, allowing us to store and manipulate multiple values or more complex data. Here’s an easy explanation of each with examples:
+
+
+1. Class
+A class is a blueprint for creating objects with shared properties and methods. It helps structure your code for reusability.
+
+// Define a class
+class Car {
+  constructor(make, model) {
+    this.make = make;
+    this.model = model;
+  }
+
+  start() {
+    return ${this.make} ${this.model} is starting!;
+  }
+}
+
+// Create an object using the class
+const myCar = new Car("Toyota", "Corolla");
+console.log(myCar.start()); // Output: "Toyota Corolla is starting!"
+
+
+2. Object
+An object is a collection of key-value pairs. It can represent real-world entities or structured data.
+
+// Example of an object
+const person = {
+  name: "Alice",
+  age: 25,
+  greet() {
+    return Hi, I'm ${this.name};
+  }
+};
+
+console.log(person.name); // Output: "Alice"
+console.log(person.greet()); // Output: "Hi, I'm Alice"
+
+3. Array
+An array is a special type of object that stores multiple values in an ordered list.
+Ex :-
+const fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits[1]); // Output: "Banana"
+fruits.push("Date");
+console.log(fruits); // Output: ["Apple", "Banana", "Cherry", "Date"]
+
+4. Function
+A function is a reusable block of code designed to perform a specific task.
+Ex :-
+function add(a, b) {
+  return a + b;
+}
+
+const result = add(5, 3);
+console.log(result); // Output: 8
+
+5. Math
+The Math object provides built-in mathematical functions and constants.
+Ex :-
+console.log(Math.PI); // Output: 3.141592653589793
+console.log(Math.sqrt(16)); // Output: 4
+console.log(Math.random()); // Output: A random number between 0 and 1
+
+
+6. Date
+The Date object is used to handle dates and times.
+Ex :-
+const now = new Date();
+console.log(now); // Output: Current date and time
+console.log(now.getFullYear()); // Output: Current year
+
+
+7. JSON
+The JSON (JavaScript Object Notation) object is used to parse or stringify JSON data.
+Ex :-
+const jsonData = '{"name": "John", "age": 30}';
+const parsedData = JSON.parse(jsonData); // Converts JSON string to an object
+console.log(parsedData.name); // Output: "John"
+
+const stringifiedData = JSON.stringify(parsedData); // Converts object to JSON string
+console.log(stringifiedData); // Output: '{"name":"John","age":30}'
+
+
+8. Set
+A Set is a collection of unique values, which means no duplicate values are allowed.
+Ex :-
+const uniqueNumbers = new Set([1, 2, 3, 2, 4]);
+console.log(uniqueNumbers); // Output: Set { 1, 2, 3, 4 }
+uniqueNumbers.add(5);
+console.log(uniqueNumbers.has(3)); // Output: true
+console.log([...uniqueNumbers]); // Output: [1, 2, 3, 4, 5]
+
+
+These non-primitive types allow developers to handle more complex data and create structured, dynamic, and reusable code in JavaScript.
