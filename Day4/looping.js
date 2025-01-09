@@ -1,54 +1,46 @@
-// for (let i = 1; i >= 10; i++) {
-//     console.log("i")
+// for(let i=1; i<=5;i++){
+//     console.log("Javascript");
 // }
 
-// for (let i = 1; i <= 5; i++) {
-//     console.log("i")
-//     if(i%2 ==0)
-//         console.log(i ="i is a even number")
-// }else{
-
-//     console.log(i + "it is a odd number")
-// }
-
-
-
-
-
-// for (let i = 1; i <= 10; i++) {
-//     //     console.log("it is a odd number");
-//     //     console.log("it is aeven number");
-//     //     console.log("it isa off number")
-//     console.log('i')
-// }
-
-// function factorial(num) {
-//     let result = 1;
-//     for (let i = num; i > 1; i--) {
-//         result *= i;
+// for(let i=1;i<=100;i++){
+//     // console.log(i);
+//     if(i%2 == 0){
+//         console.log(i + " is a even number");
+//     }else{
+//         console.log(i + " is a odd number");
 //     }
-//     return result;
 // }
 
-// let a = Number(prompt("Enter a Number:"))
-// let factorial = 1;
-// for (let i = 1; i <= a; i++) {
-//     factorial = i * factorial;
+//! WAJP to find the factorial of a number
+//! 5 = 120 ; 5*4*3*2*1
+// let mul=1;
+// let num = Number(prompt("enter a number"));
+// for(let i=1;i<=num;i++){
+//     // console.log(i);
+//     mul = mul*i;
 // }
-// console.log(factorial);
+// console.log(mul);
 
-//to find the factors of the number
-// let i = 1;
-// while (i >= 5) {
-//     console.log("helllo ");
-//     i++
+//! WAJP to find the factors of a number 
+//! 12 - 2, 4 , 3,6
 
-// }
-// // do while loop
+// ! while loop
+// let i =1;
+// while(i >= 5)
 // {
-//     console.log("hello javascript")
-// } while (i <= 5);
-function addTocart() {
-    alert("product ia dded to cart successfully")
+//     console.log("Hello ");
+//     i++;
+// }
+
+// ! do-while loop
+// let i=1;
+// do
+// {
+//     i++;
+// console.log("Hello JavaScript");
+// }while(i>=5);
+
+function addToCart() {
+    alert("product is added to cart successfully");
     document.body.style.background = "red";
 }
