@@ -25,50 +25,104 @@
 // IIFE(immidiate invoke function expression)
 // arrow function
 // hitgher order function
-//callback functio//-closure
+//callback functio
+// //-closure
 
 //named function
-function test() {
-    console.log("named function");
-}
-text()
+// function test() {
+//     console.log("named function");
+// }
+// text()
 
 //anonymus function(a function which does not have name for it ,it cannot be excuted by itself)
 // function(){
 
 // }
 // ();
+
+
 //function expression (an anoaymus function body is assinged aas a value to same variable )
 // let x = function(){
 //     console.log("anonymus is not exxcuting but ")
 // }
 // ();
-// IIFE(it can be invoked one time)
-(function () {
-    console.log('anonymus')
-}
-)()
+// // IIFE(it can be invoked one time)
+// (function () {
+//     console.log('anonymus')
+// }
+// )()
 // arrow function(it is introduced in es6 feature
 //it concise  the normal
 //-()=> {};
 // function demo(){
 // let x =()=>{console.log("arrow functiom")};
 // x();
-let x =(a,b)=>(console.log(a,b));
-x(6,5);
+// let x = (a, b) => (console.log(a, b));
+// x(6, 5);
 
-let  y= a=>console.log(a)
-y(4)
-//implicit return and explicit returns
+// let y = a => console.log(a)
+// y(4)
+// //implicit return and explicit returns
 //return statement used to exppressions
 //implicitility default by  taken  
-function test1(a,b){
-    return a+b;
+// function test1(a, b) {
+//     return a + b;
 
-}console.log(test1(5,5))
+// } console.log(test1(5, 5))
 
-let c= (a,b) =>{return a*b}
-console.log(c(5,5))
+// let c = (a, b) => { return a * b }
+// console.log(c(5, 5))
 
-let d= (a,b) =>a+b
-console.log(d(5,5))
+// let d = (a, b) => a + b
+// console.log(d(5, 5))
+//!higher order functiton
+function hof(a) {//!higher ordre function
+    return a();
+}
+let z = hof(function () { return "callback function" });
+console.log(z);
+
+
+let users = ["rajiummatr", "kumar", "pranov", "sanyu"]
+console.log(users);
+users.map(function (user) {
+    console.log(user);
+}
+)
+//closure-closure is a memory created when functions are bundled tolgethre aew nested each other by gioving accessibility innernmost function to access outermost function
+var a = 10;
+let b = 45;
+function x() {
+    var user = "rajiummar";
+    let company = "google";
+    const sal = 12367006754;
+    console.log(company);
+    console.log(sal);
+    console.log(a, b);
+}
+x();
+
+
+function p(){
+    let a =10;
+    const b=20;
+    console.log(a,b);
+    function o(){
+        let p="reactjs";
+        var o ="js";
+        console.log(p,o);
+        function z(){
+            const username  =" rajiummar";
+            console.log(a)
+            console.log(o)
+       
+
+        }
+        z();
+    }
+    y();
+
+}
+x();
+
+// 
