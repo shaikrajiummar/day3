@@ -68,25 +68,60 @@
 // console.log(userDetails.address.city);
 // console.log(userDetails.address.pincode.pin1);
 //!create array of obejets
-let user1={
-    name:"rajiummar",
-    city:"hyd",
+// let user1={
+//     name:"rajiummar",
+//     city:"hyd",
+// let userDetails =[
+//     {
+//         name:"sathvik",
+//         city:"Karimnagar"
+//     },
+//     {
+//         name:"Raghu",
+//         city:"ananthpur"
+//     },
+//     {
+//         name:"Shilpa",
+//         city:"Kammam"
+//     },
+//     {
+//         name:"Bharath",
+//         city:"Sathupalli"
+//     }
+// ];
 
+// userDetails.map((user)=>{
+// console.log(user.name);
+// })
+
+// }
+// let user2={
+//     name:"rajiummar",
+//     city:"hyd",
+
+// }
+
+// let user3={
+//     name:"rajiummar",
+//     city:"hyd",
+
+// }
+// let userDetails=[
+//  {   name:"rajiummar",
+//     city:"hyd"
+// },
+// userDetails
+// ]
+
+let userData ={
+    name :"pranov",
+    age:20,
+    city:"karimnagar"
 }
-let user2={
-    name:"rajiummar",
-    city:"hyd",
+console.log(userData.name, typeof(userData));
 
-}
+let x =JSON.stringify(usrData);
+console.log(x, typeof(x));
 
-let user3={
-    name:"rajiummar",
-    city:"hyd",
-
-}
-let userDetails=[
- {   name:"rajiummar",
-    city:"hyd"
-},
-userDetails
-]
+let y= JSON.parse(x);
+console.log(y);
