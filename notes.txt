@@ -177,5 +177,32 @@ ex :-   let userdetails ={
 
 Note: - Javascript is mainly object -based language till 2015 (es6) 
 - after es6 feature they added oops concept.
-JSON:-
--JSON stands for javascriot Object notation
+json methods:-
+**************
+1.JSON.stringify() :-it is used to convert JS obejct into json object.
+2.JSON.parse() :- it is used to convert json object into javascript object.
+
+Asynchronous in javascript:-
+****************************
+- to perform multiple task at a time.
+
+1.setTimeout() :- it is web api used to perform asyn operations with certain timeouts.
+syntax :-   setTimeout(callbackfn , timeout);
+
+2.setInterval() :- it is a web api used to perform async operation at every time interval specified.
+synatx :-  setInterval(callbackfn , timeout);
+
+3.promise :- Promise is an object which represents eventual completion or failures of async operations.
+        states of promise:-
+        1.pending state
+        2.fulfilled state
+        3.rejected state
+
+4.async & await
+
+note:- javscript is by default "Synchronous(single threaded)".
+
+create -post
+read- get
+update- put
+delete - delete
