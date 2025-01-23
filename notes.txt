@@ -197,12 +197,49 @@ synatx :-  setInterval(callbackfn , timeout);
         1.pending state
         2.fulfilled state
         3.rejected state
+        syntax :-    let x = new Promise((resolve , reject)=>{});
+
+        to execute the promise we have instance methods:-
+                1.then() :- it is used to execute success or fulfilled state results.
+                2.catch() :- it is used to execute rejected state results.
+                3.finally() :- once promise is settled it will print for both success/failures
+
 
 4.async & await
 
 note:- javscript is by default "Synchronous(single threaded)".
 
-create -post
-read- get
-update- put
-delete - delete
+Create - POST
+Read - GET
+update - PUT
+Delete - Delete
+
+
+
+****
+DOM:-
+-DOM=stands for document object model
+- Dpom is a web api used to manipulate the html content 
+-DOM is ued to add, remove, update the content in the htmldocument
+DOM methods:-
+*************
+1.document.getElementById(""):-
+
+-it is used to select html element based on "id attribute" value.
+-with id TTRIBUTE we can select only one element (unique element)
+
+2.document.getElementByClassName(""):-
+
+-it is used to select html element based on "class attribute" value
+-with calss attribute we can select the multiple elements.
+
+3.document.getElementByTagName(""):-
+
+-it is used to select html element based on their tag names. 
+
+4..document.getElementByName("")
+
+-it is used to select  html element based on "name attribute".
+
+5.document.querySelector(""):-
+6.document.querySelectorAll();

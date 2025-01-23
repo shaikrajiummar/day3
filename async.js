@@ -46,16 +46,49 @@
 
 
 //API FECTHING
-function fetchusers() {
-    let response = fetch('https://jsonplaceholder.typicode.com/users');
-    response.then(res => {
+// function fetchusers() {
+//     let response = fetch('https://jsonplaceholder.typicode.com/users');
+//     response.then(res => {
 
 
-        response.then(json => console.log(json))
-        return res.json().then(data => {
-            console.log(data);
-        })
-    })
-        .catch(err => console.log(err))
+//         response.then(json => console.log(json))
+//         return res.json().then(data => {
+//             console.log(data);
+//         })
+//     })
+//         .catch(err => console.log(err))
+// }
+// fetchusers();
+
+//! async & await
+// function demo()
+// {
+//     console.log("start");
+//     console.log(10);
+//     console.log(20);
+//     return;
+//     console.log(30);
+//     console.log("end");
+// }
+let p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reslove("Succes")
+
+    }, 4000);
+});
+async function demo() {
+    console.log("start");
+    let x = await p;
+    console.log(x);
+    console.log("end");
 }
-fetchusers();
+
+
+
+async function fetchusers() {
+
+    let response = await fetch("https://jsonplaceholder.typicode.com/users");
+    let data = await response.json();
+    console.log(data);
+}
+fetchusers()
