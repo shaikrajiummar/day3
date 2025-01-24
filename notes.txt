@@ -243,3 +243,12 @@ DOM methods:-
 
 5.document.querySelector(""):-
 6.document.querySelectorAll();
+
+
+
+Events
+********
+
+-events are nothing but an actions performed on the html element
+- in dom , we have like events like click events,mouse events and key events
+- clicl events:- onclick, andblclick,
