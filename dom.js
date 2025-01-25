@@ -37,10 +37,40 @@
 // let ele = document.querySelectorAll(".test");
 // console.log(ele)
 
-let demo= document.getElementById('demo');
-demo.addEventListener("click",()=>{
-    console.log("button clickrd")
-    alert('hi');
-    document.body.style.getElementById("demo");
-    
-})
+// let demo= document.getElementById('demo');
+// demo.addEventListener("click",()=>{
+//     console.log("button clickrd")
+//     alert('hi');
+//     document.body.style.getElementById("demo");
+
+// })
+
+// let bgColor = document.querySelectorAll(".bgColor");
+// //console.log(bgColor);
+// [...bgColor].map(element => {
+
+//     element.addEventListener("mouseover", () => {
+//         //console.log(element.innerTexr);
+//         element.style.backgroungColor = element.innerText;
+//         // element.style.backgroungColor = "red";
+//         //console.log(element.innerText);
+//         // element.style.backgroungColor = "blue";
+
+//     });
+//     element.addEventListener("mouseleave", () => {
+//         element.style.backgroungColor = "transparent";
+//     });
+// });
+
+let bgColor = document.querySelectorAll(".bgColor");
+
+[...bgColor].map(element => {
+    element.addEventListener("mouseover", () => {
+        // Set background color based on the element's text content
+        element.style.backgroundColor = element.innerText;
+    });
+
+    element.addEventListener("mouseleave", () => {
+        element.style.backgroundColor = "transparent";
+    });
+});

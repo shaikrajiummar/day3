@@ -251,4 +251,10 @@ Events
 
 -events are nothing but an actions performed on the html element
 - in dom , we have like events like click events,mouse events and key events
-- clicl events:- onclick, andblclick,
+- clicl events:- onclick, andblclick,onsumbit,onchange
+-mouse events-mouserover,mouseleave
+-key events-keydown.keyup,keypress(deprocated)
+
+Dynamic creation of html element in js:-
+*********************************
+crate html element in javascript ,we call
