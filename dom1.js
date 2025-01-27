@@ -13,18 +13,82 @@
 // document.body.appendChild(image)
 
 
-let form = document.querySelector("from");
-let username = document.querySelector("#username");
-let useremail = document.querySelector("uesremail");
-let userpassword = document.querySelector("userpassword");
+// let form = document.querySelector("from");
+// let username = document.querySelector("#username");
+// let useremail = document.querySelector("uesremail");
+// let userpassword = document.querySelector("userpassword");
 
-form.addEventListener("submit",(event)=>{
-    event.preventDefault();
+// form.addEventListener("submit",(event)=>{
+//     event.preventDefault();
 
 
-    let name =username.value;
-    let mail =email.value
-    let password = password.value;
+//     let name =username.value;
+//     let mail =email.value
+//     let password = password.value;
     
-})
+// })
 
+
+// 27/01/25
+
+
+// let mainEle= document.createElement("div");
+// // mainEle.innerText = "main";
+// mainEle.setAttribute("id" , "mainBlock");
+// console.log(mainEle);
+
+// let topEle = document.createElement("div");
+// // topEle.innerText="top";
+// topEle.setAttribute("class" ,"topBLock");
+// //console.log(topEle);
+
+// let image = document.createElement("img");
+// image src ="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg"
+// image.width ="300";
+// image.height="300";
+// image.style.objectFit="cover";
+
+// let bottomEle = document.createElement("div");
+// bottomEle.setAttribute("class" ,"bottomBlock");
+// //console.log(bottomEle);
+// let h1 = document.createElement("h1");
+// h1.innerText="CAT";
+// let btn = document.createElement("button");
+// btn.innerText="view More";
+
+// bottomEle.appendChild(h1);
+// bottomEle.appendChild(btn);
+// bottomEle.appendChild(image);
+// mainEle.appendChild(topEle);
+// mainEle.appendChild(bottomEle);
+// document.body.appendChild(mainEle);
+document.addEventListener("DOMContentLoaded", () => {
+    let mainEle = document.createElement("div");
+    mainEle.id = "mainblock";
+  
+    let topEle = document.createElement("div");
+    topEle.className = "topBlock";
+  
+    let bottomElement = document.createElement("div");
+    bottomElement.className = "bottomBlock";
+  
+    mainEle.appendChild(topEle);
+    mainEle.appendChild(bottomElement);
+  
+    let img = document.createElement("img");
+    img.src = "https://www.thewowstyle.com/wp-content/uploads/2015/01/nature-images..jpg";
+    img.width="300"
+    img.height="300"
+    img.style.objectFit="cover"
+    topEle.appendChild(img);
+  
+    document.body.appendChild(mainEle);
+    let h1=document.createElement("h1")
+    h1.innerText="CAT"
+    let btn=document.createElement("button")
+    btn.innerText="View More";
+    bottomElement.appendChild(h1)
+    bottomElement.appendChild(btn)
+  });
+
+  
