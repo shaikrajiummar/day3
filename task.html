@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2" cellpadding="10px" cellspacing="0px">
+        <thead>
+            <tr>
+               <th>id</th>
+                <th>name</th>
+                <th>company</th>
+                <th>salary</th>
+                <th>city</th>
+                <th>area</th>
+            </tr>
+        </thead>
+        <tbody id="store"></tbody>
+    </table>
+    <script>
+        const employees =[
+    {
+        id: 1,
+        name: "Charan Sai",
+        company: "TCS",
+        salary: 50000,
+        address:{
+            city:"Hyderabad",
+            area:"Kondapur",
+        }
+    
+    },
+    {
+        id: 2,
+        name: "Sai Vasanth",
+        company: "Tech Mahindra",
+        salary: 60000,
+        address:{
+            city:"Hyderabad",
+            area:"Kukatpally",
+        }
+        
+    },
+    {
+        id: 3,
+        name: "Praharsha",
+        company: "Infosys",
+        salary: 40000,
+        address:{
+            city:"Nizambad",
+            area:"Gangasthan",
+        }
+        
+    },
+    {
+        id: 4,
+        name: "Sanyu Paul",
+        company: "Google",
+        salary: 80000,
+        address:{
+            city:"Hyderabad",
+            area:"Kukakpally",
+        }
+        
+    },
+    {
+        id: 5,
+        name: "Rajiu Ummar",
+        company: "Amazon",
+        salary: 60000,
+        address:{
+            city:"Hyderabad",
+            area:"Balnagar",
+        }
+        
+    }
+    ];
+    const store = document.getElementById("store");
+    employees.forEach((employee)=>{
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+        <td>${employee.id}</td>
+        <td>${employee.name}</td>
+        <td>${employee.company}</td>
+        <td>${employee.salary}</td>
+        <td>${employee.address.city}</td>
+        <td>${employee.address.area}</td>
+        `;
+        store.appendChild(tr);
+    });
+    </script>
+
+</body>
+</html>

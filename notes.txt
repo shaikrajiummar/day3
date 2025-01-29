@@ -264,3 +264,9 @@ Dynamic creation of html element in js:-
 - to set the attributes we can use a method called as "setAttribute()".
 
 - to remove attribute we have  method "removeAttribute()"
+
+
+task
+
+Take array of objects while each object contains  emp emailid,emp name,emp company,emp salary and emp address while emp address, further contains an object while includes two properties  sucha s emp city, area .
+dispay all the employess data on this employess data on the UI through javascript
