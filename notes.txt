@@ -266,7 +266,14 @@ Dynamic creation of html element in js:-
 - to remove attribute we have  method "removeAttribute()"
 
 
-task
+task:
+*****
 
 Take array of objects while each object contains  emp emailid,emp name,emp company,emp salary and emp address while emp address, further contains an object while includes two properties  sucha s emp city, area .
 dispay all the employess data on this employess data on the UI through javascript
+
+
+Modules:import/export 
+
+1. Named exports
+2.default exports
