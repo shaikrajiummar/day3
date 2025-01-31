@@ -273,7 +273,14 @@ Take array of objects while each object contains  emp emailid,emp name,emp compa
 dispay all the employess data on this employess data on the UI through javascript
 
 
-Modules:import/export 
+Modules:
+************
+-modules is just a file which contans javascript related code which can be shared between import and export
 
+-modules is divided into 2 types:-
+1.commom js modules(server)
+2.es6 modules(client)
 1. Named exports
 2.default exports
+
+1.default exports :- only one default 
