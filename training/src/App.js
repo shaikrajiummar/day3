@@ -10,6 +10,8 @@
 // // React.createElement("h1",null,"hello from react"));
 // //   let username = "charan";
 
+import { Component } from "react";
+
 // //   return (
 // //     <div className="App">
 // //       <h1>Malla Reddy University</h1>
@@ -86,28 +88,63 @@
 // }
 // export default App;/
 
-import React from 'react';
-import './Components/Navbar1.css';
-import Navbar from './Components/Navbar';
-import Main from './Components/Main';
-import Sidebar1 from './Components/Sidebar1';
-import Sidebar2 from './Components/Sidebar2';
-import Footer from './Components/Footer';
+// import React from 'react';
+// import './Components/Navbar1.css';
+// import Navbar from './Components/Navbar';
+// import Main from './Components/Main';
+// import Sidebar1 from './Components/Sidebar1';
+// import Sidebar2 from './Components/Sidebar2';
+// import Footer from './Components/Footer';
 
-class App extends React.Component {
+// class App extends React.Component {
+//   render() {
+//     return (
+//       <div className="App">
+//         <Navbar />
+//         <Main />
+//         <div className="side">
+//           <Sidebar1 />
+//           <Sidebar2 />
+//         </div>
+//         <Footer />
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
+
+//!props
+
+
+import React from "react";
+class CBCPropEx1 extends React.Component {
   render() {
+    const { name, age, hobbies, address, isMarried, sendFun } = this.props;
+
     return (
-      <div className="App">
-        <Navbar />
-        <Main />
-        <div className="side">
-          <Sidebar1 />
-          <Sidebar2 />
-        </div>
-        <Footer />
+      <div>
+        <h1>{name}</h1>
+        <h2>Age: {age}</h2>
+        
+        <h3>Hobbies:</h3>
+        <ul>
+          {hobbies.map((hobby, index) => (
+            <li key={index}>{hobby}</li>
+          ))}
+        </ul>
+
+        <h3>Address:</h3>
+        <p>
+          City: {address.city}, Area: {address.area}
+        </p>
+
+        <h3>Status: {isMarried ? "Married" : "Not Married"}</h3>
+
+        <button onClick={sendFun}>Click Me</button>
       </div>
     );
   }
 }
 
-export default App;
+export default CBCPropEx1;

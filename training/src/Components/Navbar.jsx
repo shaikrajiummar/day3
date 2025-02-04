@@ -11,6 +11,7 @@ import React from "react";
 // }
 // export default Navbar;
 
+import React from "react";
 
 function Navbar() {
   return (
