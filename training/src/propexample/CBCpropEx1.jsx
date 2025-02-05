@@ -23,24 +23,28 @@
 // export default App;
 //^Props
 
-import React from "react";
-import CBCPropEx1 from "./propexample/CBCProEx1";
+// import React from "react";
+// import CBCPropEx1 from "./propexample/CBCProEx1";
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <CBCPropEx1
-          name="Rajiummar"
-          age={19}
-          hobbies={["playing Free Fire", "watching movies"]}
-          address={{ city: "Khammam", area: "Tallada" }}
-          isMarried={false}
-          sendFun={() => alert("Hi Rajiummar")}
-        />
-      </div>
-    );
-  }
-}
+// class App extends React.Component {
+//   render() {
+//     return (
+//       <div>
+//         <CBCPropEx1
+//           name="Rajiummar"
+//           age={19}
+//           hobbies={["playing Free Fire", "watching movies"]}
+//           address={{ city: "Khammam", area: "Tallada" }}
+//           isMarried={false}
+//           sendFun={() => alert("Hi Rajiummar")}
+//         />
+//       </div>
+//     );
+//   }
+// }
 
-export default App;
+// export default App;
+
+
+
+//!props -children

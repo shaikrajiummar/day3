@@ -10,7 +10,7 @@
 // // React.createElement("h1",null,"hello from react"));
 // //   let username = "charan";
 
-import { Component } from "react";
+// import { Component } from "react";
 
 // //   return (
 // //     <div className="App">
@@ -117,34 +117,55 @@ import { Component } from "react";
 //!props
 
 
-import React from "react";
-class CBCPropEx1 extends React.Component {
-  render() {
-    const { name, age, hobbies, address, isMarried, sendFun } = this.props;
+// import React from "react";
+// class CBCPropEx1 extends React.Component {
+//   render() {
+//     const { name, age, hobbies, address, isMarried, sendFun } = this.props;
 
+//     return (
+//       <div>
+//         <h1>{name}</h1>
+//         <h2>Age: {age}</h2>
+        
+//         <h3>Hobbies:</h3>
+//         <ul>
+//           {hobbies.map((hobby, index) => (
+//             <li key={index}>{hobby}</li>
+//           ))}
+//         </ul>
+
+//         <h3>Address:</h3>
+//         <p>
+//           City: {address.city}, Area: {address.area}
+//         </p>
+
+//         <h3>Status: {isMarried ? "Married" : "Not Married"}</h3>
+
+//         <button onClick={sendFun}>Click Me</button>
+//       </div>
+//     );
+//   }
+// }
+
+// export default CBCPropEx1;
+
+
+//!props.children
+import React from 'react'
+import PropsChildrenex from './propexample/PropsChildrenex'
+import SubChildrenProps from './propexample/SubChildrenProps'
+
+const App =()=>{
     return (
       <div>
-        <h1>{name}</h1>
-        <h2>Age: {age}</h2>
+        <PropsChildrenex username="Rajiummar" company="Google">
+        <h1>This data is passing as a props to child components</h1>
+        <SubChildrenProps></SubChildrenProps>
+        </PropsChildrenex>
         
-        <h3>Hobbies:</h3>
-        <ul>
-          {hobbies.map((hobby, index) => (
-            <li key={index}>{hobby}</li>
-          ))}
-        </ul>
-
-        <h3>Address:</h3>
-        <p>
-          City: {address.city}, Area: {address.area}
-        </p>
-
-        <h3>Status: {isMarried ? "Married" : "Not Married"}</h3>
-
-        <button onClick={sendFun}>Click Me</button>
       </div>
-    );
+    )
   }
-}
 
-export default CBCPropEx1;
+ export default App;
+
