@@ -1,1 +1,5 @@
 why did to write border vox praper
+
+
+State:
+-state is an object which ids uesd to store /isolote the data inside the data inside the componennt

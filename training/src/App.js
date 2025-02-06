@@ -151,21 +151,35 @@
 
 
 //!props.children
-import React from 'react'
-import PropsChildrenex from './propexample/PropsChildrenex'
-import SubChildrenProps from './propexample/SubChildrenProps'
+// import React from 'react'
+// import PropsChildrenex from './propexample/PropsChildrenex'
+// import SubChildrenProps from './propexample/SubChildrenProps'
 
-const App =()=>{
+// const App =()=>{
+//     return (
+//       <div>
+//         <PropsChildrenex username="Rajiummar" company="Google">
+//         <h1>This data is passing as a props to child components</h1>
+//         <SubChildrenProps></SubChildrenProps>
+//         </PropsChildrenex>
+        
+//       </div>
+//     )
+//   }
+
+//  export default App;
+
+
+//change button 
+import CBCStateEx from './stateexamples/CBCStateEx';
+const App=()=> {
+  
     return (
       <div>
-        <PropsChildrenex username="Rajiummar" company="Google">
-        <h1>This data is passing as a props to child components</h1>
-        <SubChildrenProps></SubChildrenProps>
-        </PropsChildrenex>
-        
+        <CBCStateEx/>
       </div>
+      
     )
   }
 
- export default App;
-
+export default App;
