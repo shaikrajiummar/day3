@@ -171,15 +171,43 @@
 
 
 //change button 
-import CBCStateEx from './stateexamples/CBCStateEx';
-const App=()=> {
+// import CBCStateEx from './stateexamples/CBCStateEx';
+// const App=()=> {
   
-    return (
-      <div>
-        <CBCStateEx/>
-      </div>
+//     return (
+//       <div>
+//         <CBCStateEx/>
+//       </div>
       
-    )
-  }
+//     )
+//   }
+
+// export default App;
+
+// import React from 'react'
+// import CBCStateEx from './stateexamples/CBCStateEx'
+// import FBCStateEx from './stateexamples/FBCStateEx'
+
+// const App = () => {
+//   return (
+//     <div>
+//       {/* <CBCStateEx/> */}
+//       <FBCStateEx/>
+//     </div>
+//   )
+// }
+
+// export default App
+import FuctionalComponent from './Components/FunctionalComponent';
+
+const App = () => {
+  return (
+    <div>
+    <FuctionalComponent 
+      clg='MRU' city="Hyderabad"
+    />  
+    </div>
+  );
+};
 
 export default App;
