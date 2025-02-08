@@ -198,16 +198,31 @@
 // }
 
 // export default App
-import FuctionalComponent from './Components/FunctionalComponent';
+// import FuctionalComponent from './Components/FunctionalComponent';
 
-const App = () => {
+// const App = () => {
+//   return (
+//     <div>
+//     <FuctionalComponent 
+//       clg='MRU' city="Hyderabad"
+//     />  
+//     </div>
+//   );
+// };
+
+// export default App;
+import logo from './logo.svg'
+import './App.css';
+import MyForm from './Components/myForm';
+
+
+
+function App() {
   return (
-    <div>
-    <FuctionalComponent 
-      clg='MRU' city="Hyderabad"
-    />  
-    </div>
+    <div className="App">
+     <MyForm></MyForm>
+     </div>
   );
-};
+}
 
 export default App;
