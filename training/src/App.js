@@ -211,17 +211,30 @@
 // };
 
 // export default App;
-import logo from './logo.svg'
-import './App.css';
-import MyForm from './Components/myForm';
+// import logo from './logo.svg'
+// import './App.css';
+//  MyForm from './Components/myForm';
+// import UseEffectEx from './Hooks/UseEffectEx';
 
 
+// function App() {
+//   return (
+//     <div className="App">
+//      <MyForm></MyForm>
+//      import</div>
+//   );
+// }
+
+// export default App;
+import React from "react";
+import UseEffectEx from "./Hooks/UseEffectEx";
 
 function App() {
   return (
     <div className="App">
-     <MyForm></MyForm>
-     </div>
+      <h1>Welcome to UseEffect</h1>
+      <UseEffectEx />
+    </div>
   );
 }
 
