@@ -226,14 +226,30 @@
 // }
 
 // export default App;
-import React from "react";
-import UseEffectEx from "./Hooks/UseEffectEx";
+//import React from "react";
+// // import UseEffectEx from "./Hooks/UseEffectEx";
+// import RefExample from "./Hooks/RefExample";
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <h1>Welcome to UseEffect</h1>
+//       <UseEffectEx />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+import React from 'react';
+import RefExample from './Hooks/RefExample'; 
+import  viedo from "./Hooks/Video.mp4";
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to UseEffect</h1>
-      <UseEffectEx />
+      <RefExample />
     </div>
   );
 }
