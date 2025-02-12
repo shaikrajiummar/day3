@@ -126,7 +126,7 @@
 //       <div>
 //         <h1>{name}</h1>
 //         <h2>Age: {age}</h2>
-        
+
 //         <h3>Hobbies:</h3>
 //         <ul>
 //           {hobbies.map((hobby, index) => (
@@ -162,7 +162,7 @@
 //         <h1>This data is passing as a props to child components</h1>
 //         <SubChildrenProps></SubChildrenProps>
 //         </PropsChildrenex>
-        
+
 //       </div>
 //     )
 //   }
@@ -173,12 +173,12 @@
 //change button 
 // import CBCStateEx from './stateexamples/CBCStateEx';
 // const App=()=> {
-  
+
 //     return (
 //       <div>
 //         <CBCStateEx/>
 //       </div>
-      
+
 //     )
 //   }
 
@@ -242,16 +242,43 @@
 // export default App;
 
 
+// import React from 'react';
+// //import RefExample from './Hooks/RefExample'; 
+// //import  viedo from "./Hooks/Video.mp4";
+// import Audio from "./Hooks/Audio.mp3";
+// import Audio from "./Hooks/Audio.jsx";
+// function App() {
+//   return (
+//     <div className="App">
+//      <h1>Audio</h1>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// import React from 'react';
+// import Audio from "./Hooks/Audio.jsx";
+
+// const App = () => {
+//   return (
+//     <div>
+//       <h1>Welcome to the Audio Player App</h1>
+//       <Audio />
+//     </div>
+//   );
+// };
+
+// export default App;
 import React from 'react';
-import RefExample from './Hooks/RefExample'; 
-import  viedo from "./Hooks/Video.mp4";
-
-function App() {
-  return (
-    <div className="App">
-      <RefExample />
-    </div>
-  );
+import Navbar from './Components1/Navbar';
+import Styles from './Components1/navbar.modules.css'
+const App= () => {
+    return (
+        <div>
+            <Navbar />
+        
+        </div>
+    )
 }
-
 export default App;
