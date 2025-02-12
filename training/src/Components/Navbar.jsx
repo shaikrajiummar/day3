@@ -1,24 +1,17 @@
-import React from "react";
+import React from 'react'
+import Logo from './Logo'
+import Menu from './Menu'
+import Styles from "./navbar.module.css";
 
-// class Navbar extends React.Component {
-//   render() {
-//     return (
-//       <div className="navbar">
-//         <h1>Navbar</h1>
-//       </div>
-//     );
-//   }
-// }
-// export default Navbar;
-
-import React from "react";
-
-function Navbar() {
+const Navbar = () => {
   return (
-    <div className="navbar">
-      <h1>Navbar</h1>
-    </div>
-  );
+    <section id={Styles.navBlock}>
+        <article>
+            <Logo/>
+            <Menu/>
+        </article>
+    </section>
+  )
 }
 
-export default Navbar;
+export default Navbar
