@@ -1,0 +1,20 @@
+"users" : [
+    {
+        "id": "1",
+        "name": "Rajiummar",
+        "email": "Rajiummar@gmail.com",
+        "phone": "654518616"
+    },
+    {
+        "id": "2",
+        "name": "charan",
+        "email": "charan@gmail.com",
+        "phone": "9876543210"
+    },
+    {
+        "id": "3",
+        "name": "sanyu",
+        "email": "sanyur@gmail.com",
+        "phone": "852741963"
+    }
+]

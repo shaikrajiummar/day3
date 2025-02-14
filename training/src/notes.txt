@@ -6,3 +6,14 @@ Routing in react:-
 
 - npm install react-router-dom@latest
 
+CRUD OPERATIONS
+***************
+C-create-POST()
+R-read-GET()
+U-update-PUT()
+D-delete-DELETE()
+
+HTTPS :- hyper text trasfer protocol secured
+http:-
+smtp , ftp,tcp ,ip etc...
+
