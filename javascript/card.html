@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1284ae;
+        }
+        
+        .card {
+            width: 300px;
+            background: rgb(234, 237, 238);
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 15px;
+        }
+        
+        .card-content h2 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        
+        .card-content p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        
+        .card-content .btn {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            font-size: 14px;
+           
+        }
+
+        .card-content .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src='./card.png' alt="Sunset">
+        <div class="card-content">
+            <h2>Write Title Here</h2>
+            <p>You can Add Description Here...</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+</body>
+</html>
