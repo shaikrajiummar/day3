@@ -1,59 +1,82 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom"; 
-import axios from "axios";
-import "./Home.css";
+import React, { useEffect, useState } from 'react'
+import "./home.css";
+
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Home = () => {
-    const [users, setUsers] = useState([]);
+    const[users , setUsers]=useState([]);
+    // console.log(users);
+    useEffect(()=>{
+        axios.get("http://localhost:8000/users")
+        .then(res=>{
+            // console.log(res.data);
+            setUsers(res.data);
+        })
+        .catch(err=>console.log(err))
+    },[]);
 
-    useEffect(() => {
-        axios.get("http://localhost:8000/users") 
-            .then(response => setUsers(response.data))
-            .catch(error => console.error("Error fetching users:", error));
-    }, []);
+    // ! delete individual user data
 
-    return (
-        <section id="homeBlock">
-            <article>
-                <h1>List of Users</h1>
+    const deleteUser = id =>{
+        const confirm = window.confirm("Are you sure you want to delete user");
+        if(confirm){
+            axios.delete("http://localhost:8000/users/"+id)
+            .then(res=>{
+                // console.log("user deleted successfully");
+                toast.warning("user deleted successfully");
+                setTimeout(()=>{
+                    window.location.reload();
+                },1500)
+            }).catch(err=>console.log("user not deleted"))
+        }
+    }
+
+  return (
+    <section id="homeBlock">
+        <article>
+            <h1>List Of Users</h1>
+
+            <div className="createBtn">
+                <Link to='/create'>Add User (+)</Link>
+            </div>
+           {
+            users && users.length > 0 ?(
                 <table>
-                    <thead>
-                        <tr>
-                            <th>SI.No</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Edit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {users.length > 0 ? (
-                            users.map((user, index) => (
-                                <tr key={user.id}>
-                                    <td>{index + 1}</td>
+                <thead>
+                    <tr>
+                        <th>Sl.No</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone no</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        users.map((user , i)=>{
+                            return(
+                                <tr key={i}>
+                                    <td>{user.id}</td>
                                     <td>{user.name}</td>
                                     <td>{user.email}</td>
                                     <td>{user.phone}</td>
                                     <td>
-                                    <Link to={`/edit/${user.id}`}>
-                                            <button className="edit-btn">Edit</button>
-                                        </Link>
+                                        <Link to={`/edit/${user.id}`}>Edit</Link>
+                                        <button onClick={()=>deleteUser(user.id)}>Delete</button>
                                     </td>
                                 </tr>
-                            ))
-                        ) : (
-                            <tr>
-                                <td colSpan="4" style={{ textAlign: "center" }}>No data available</td>
-                            </tr>
-                        )}
-                    </tbody>
-                </table>
-                <Link to="/create">
-                    <button>Create</button>
-                </Link>
-            </article>
-        </section>
-    );
-};
+                            )
+                        })
+                    }
+                </tbody>
+            </table>
+            ) :<h1>No Data available</h1>
+           }
+        </article>
+    </section>
+  )
+}
 
-export default Home;
+export default Home

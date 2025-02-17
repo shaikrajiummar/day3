@@ -1,72 +1,73 @@
-import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
-
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import "./create.css";
+import { toast } from "react-toastify";
 
 const Edit = () => {
-    const { id } = useParams(); 
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState("");
-    const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
 
-   
-    useEffect(() => {
-        axios.get(`http://localhost:8000/users/${id}`)
-            .then(response => {
-                setName(response.data.name);
-                setEmail(response.data.email);
-                setPhone(response.data.phone);
-            })
-            .catch(error => console.error("Error fetching user:", error));
-    }, [id]);
+  const navigate = useNavigate();
 
-  
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        axios.put(`http://localhost:8000/users/${id}`, { name, email, phone })
-            .then(() => {
-                console.log("User updated successfully");
-                navigate("/"); 
-            })
-            .catch(error => console.error("Error updating user:", error));
-    };
+  const data = useParams();
+  // console.log(data);
 
-    return (
-        <div className="edit-container">
-            <h2>Edit User</h2>
-            <form onSubmit={handleSubmit} className="edit-form">
-                <input
-                    type="text"
-                    placeholder="Name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className="edit-input"
-                /><br/>
+  // !read /populate the exisiting individual user data
+  useEffect(()=>{
+    axios.get("http://localhost:8000/users/"+data.userId)
+    .then(res=>{
+      // console.log(res);
+      setName(res.data.name);
+      setEmail(res.data.email);
+      setPhone(res.data.phone)
+    }).catch(err=>console.log(err))
+  },[])
 
-                <input
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="edit-input"
-                /><br/>
+  let handleSubmit = (e) => {
+    e.preventDefault();
+    let payload = { name, email, phone };
+    // console.log(payload);
+    axios.put("http://localhost:8000/users/"+data.userId , payload)
+    .then(res=>{
+      toast.success("user updated successfully");
+      navigate("/");
+    }).catch(err=>toast.error("user not updated"))
+    
+  };
+  return (
+    <div className="formBlock">
+      <h1>Update User</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="username"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <br />
+        <input
+          type="email"
+          placeholder="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <br />
+        <input
+          type="tel"
+          placeholder="phone number"
+          maxLength={10}
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+        />
+        <br />
 
-                <input
-                    type="text"
-                    placeholder="Phone"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    className="edit-input"
-                    maxLength={10}
-                /><br/>
-
-                <button type="submit" className="edit-submit-btn">Update</button>
-            </form><br/>
-
-            <button onClick={() => navigate('/')} className="return-home-btn">Return to Home</button>
-        </div>
-    );
+        <input type="submit" value="Update User" />
+        <Link to="/">Back to Home page</Link>
+      </form>
+    </div>
+  );
 };
 
 export default Edit;
