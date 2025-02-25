@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        display: grid;
+        height:100vh;
+        grid-template-columns: 15% 70% 15%;
+        grid-template-rows: 10% 80% 10%;
+
+
+    }
+    .header{
+        background-color: gray;
+        grid-column: 1/4;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: space-around;
+        align-items : center;
+
+    }
+    .leftmenu{
+        background-color: aqua;
+        grid-column: 1/2;
+        grid-row:2/3 ;
+
+
+    }
+    .main{
+        background-color: brown;
+        grid-column: 2/3;
+        grid-row: 2/3;
+
+    }
+    .rightmenu{
+        background-color: aqua;
+        grid-column: 3/4;
+        grid-row: 2/3;
+
+    }
+    .footer{
+        background-color: gray;
+        grid-column: 1/4;
+        grid-row: 3/4;;
+
+    }
+
+</style>
+<body>
+    <section class="parent">
+    <section class="header">Header</section>
+    <section class="leftmenu">leftmenu</section>
+    <section class="main">main</section>
+    <section class="rightmenu">rightmenu</section>
+     <section class="footer">footer</section>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        display :grid;
+        height:100vh;
+        grid-template-columns: 15% 70% 15%;
+        grid-template-rows: 10% 70% 10%;
+
+    }
+    .header{
+        background-color: green;
+        grid-column: 1/4;
+        grid-row: 1/2;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5px;
+        margin-bottom: 10px;
+
+    }
+    .Nav{
+        background-color: green;
+        grid-column: 1/2;
+        grid-row:2/4;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        
+    
+    }
+    .Article{
+        background-color: greenyellow;
+        grid-column: 2/4;
+        grid-row: 2/4;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 10px;
+         
+
+    }
+    .Ads{
+        background-color: greenyellow;
+        grid-column: 2/4;
+        grid-row: 3/4;
+        display: flex;
+        justify-content: space-around;
+        align-items: center
+
+
+    }
+    .Footer{
+        background-color: greenyellow;
+        grid-column: 1/4;
+        grid-row: 4/4;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 10px;
+
+
+    }
+</style>
+<body>
+    <section class="parent">
+    <section class="header">Header</section>
+    <section class="Nav">nav</section>
+    <section class="Article">Article</section>
+    <section class="Ads">Ads</section>
+    <section class="Footer">Footer</section>
+    </section>
+</body>
+</html>
