@@ -66,3 +66,26 @@ ex:align-content:centre;
 
 15)flex-flow
 it is used to specify the flex  
+
+
+Spring Boot:
+************
+
+-spring boot is an open source frame work which is built on top of spring frame work.
+-With the help of spring boot we can develop production ready app;lications or web applications
+with minimal configuration(less requriements of hardware and software supports)
+
+MVC(model voew controller):
+****
+Spring boot follows the mvc architecture pattern to develop web applications
+MVC means:
+m=> model
+v=. view
+c=>ontroller
+
+Ecart:
+******
+
+AWS s3 Bucket
+MYSQL
+SPRING BOOT

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
     .parent{
         display :grid;
         height:100vh;
         grid-template-columns: 15% 70% 15%;
         grid-template-rows: 10% 70% 10%;
-
+        
     }
     .header{
         background-color: green;
@@ -20,9 +20,7 @@
         display:flex;
         justify-content: space-around;
         align-items: center;
-        padding: 5px;
-        margin-bottom: 10px;
-
+        border-bottom:solid white 5px;
     }
     .Nav{
         background-color: green;
@@ -31,10 +29,9 @@
         display:flex;
         justify-content: space-around;
         align-items: center;
-        margin-right: 10px;
-        margin-bottom: 10px;
+        border-right: solid white 5px;
+        border-bottom: solid white 5px
         
-    
     }
     .Article{
         background-color: greenyellow;
@@ -43,39 +40,37 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-bottom: 10px;
-         
-
+        
     }
     .Ads{
-        background-color: greenyellow;
+        border-top: solid white 5px;
+        border-bottom: solid white 5px;
+        background-color: rgb(0, 251, 255);
         grid-column: 2/4;
         grid-row: 3/4;
         display: flex;
         justify-content: space-around;
-        align-items: center
-
+        align-items: center;
 
     }
     .Footer{
-        background-color: greenyellow;
+        
+        background-color: rgb(47, 255, 47);
         grid-column: 1/4;
         grid-row: 4/4;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-top: 10px;
-
-
+    
     }
 </style>
-<body>
-    <section class="parent">
-    <section class="header">Header</section>
-    <section class="Nav">nav</section>
-    <section class="Article">Article</section>
-    <section class="Ads">Ads</section>
-    <section class="Footer">Footer</section>
-    </section>
-</body>
+    <body>
+        <section class="parent">
+            <section class="header">Header</section>
+            <section class="Nav">nav</section>
+            <section class="Article">Article</section>
+            <section class="Ads">Ads</section>
+            <section class="Footer">Footer</section>
+        </section>
+    </body>
 </html>
